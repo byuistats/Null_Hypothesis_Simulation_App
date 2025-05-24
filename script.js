@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const inputElement = document.getElementById('sampleSizeInput');
   const plotContainer = document.getElementById('plotContainer');
+  const startButton = document.getElementById('startButton'); // Get the button
 
-  inputElement.addEventListener('input', () => {
+  startButton.addEventListener('click', () => { // Add event listener to the button
     const sampleSize = parseInt(inputElement.value);
 
     if (!isNaN(sampleSize) && sampleSize >= 1 && sampleSize <= 100) {
